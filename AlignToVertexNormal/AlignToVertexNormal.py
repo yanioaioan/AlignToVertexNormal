@@ -76,80 +76,12 @@ for i in range(len(vertexposlist)):
 	cmds.rotate(theta, fi, 0)
 	
 
-
-
-'''
-import maya.cmds as cmds 
-
+'''Example Test
 s=cmds.polySphere()
-
-import maya.cmds as cmds
-
-s=cmds.polySphere()
-
-# To set the xyz values of normals of selected vertices:
-v=cmds.polyNormalPerVertex(  )
-# To set just the "x" value of normal of selected vertices:
-cmds.polyNormalPerVertex( x=.37 )
-# To add to the current value of the "y" normal value of selected vertices:
-cmds.polyNormalPerVertex( rel=True, y=.13 )
-# To query the normal values on selected vertices - This returns all normals
-# regardless of whether they are shared or not:
-normals=cmds.polyNormalPerVertex( query=True, xyz=True )
-
-
-
-
-
-# To query if the normals on the selected vertices are locked or not
-cmds.polyNormalPerVertex( query=True, freezeNormal=True )
-# To query if all the normals on the selected vertices are locked or not
-cmds.polyNormalPerVertex( query=True, allLocked=True )
-# More examples
-cmds.file( f=True, new=True )
-cmds.polyCube()
-cmds.select( 'pCube1.vtxFace[2][1]', r=True )
-cmds.polyNormalPerVertex( query=True, freezeNormal=True )
-# Result: 0 #
-# Now, lock the normal of a VertexFace on the cube
-cmds.select('pCube1.vtxFace[2][1]', r=True )
-cmds.polyNormalPerVertex( xyz=(0.7071, 0, 0.7071) )
-# Query if the normal is locked for this vertexFace
-cmds.polyNormalPerVertex( query=True, freezeNormal=True )
-# Result: 1 #
-# Query if the normal is locked for all the normals on this vertex
-# Should return 0, because there are some other normals on
-# this vertex that are not locked.
-for i in 
+#select vertex and query normal
 cmds.select('pPlane1.vtx[i]', r=True)
 cmds.polyNormalPerVertex( query=True, xyz=True )
-# Result: 0 #
 '''
-
-
-	
-
-'''
-# To average normals when they are within 0.2 distance.
-cmds.polyAverageNormal( distance=0.2 )
-# To average normals when they are within 0.2 distance.
-# Normalize the normals before computing the average.
-cmds.polyAverageNormal( distance=0.2, prenormalize=True )
-# To averge normals when they are within 0.2 distance. Do not
-# normalize the normals before computing the average (so to get weighted
-# average). But do normalize the resulting normal.
-cmds.polyAverageNormal( distance=0.2, postnormalize=True )
-# To average normals when they are within 0.2 distance. Do not
-# allow zero normal and replace zero normal with (1 0 0).
-cmds.polyAverageNormal( distance=0.2, allowZeroNormal=False, replaceNormalXYZ=(1,0,0) )
-
-'''
-
-
-
-
-
-
 
 
 
