@@ -70,6 +70,7 @@ for i in range(len(vertexposlist)):
 	fi = (math.acos(vertexnormal[1])/r) * (180.0/math.pi) # acos(y/r)
 	theta = math.atan2(vertexnormal[0],vertexnormal[2]) * (180.0/math.pi) #atan2(x,z)) 
 	'''
+	r = math.sqrt(vertexnormal[0]*vertexnormal[0] + vertexnormal[1]*vertexnormal[1] + vertexnormal[2]*vertexnormal[2])
 	theta = (math.acos(vertexnormal[1])/r) * (180.0/math.pi) # acos(y/r)
 	fi = math.atan2(vertexnormal[0],vertexnormal[2]) * (180.0/math.pi) #atan2(x,z)) 
 	
@@ -79,9 +80,10 @@ for i in range(len(vertexposlist)):
 '''Example Test
 s=cmds.polySphere()
 #select vertex and query normal
-cmds.select('pPlane1.vtx[i]', r=True)
+cmds.select(s[0]+'.vtx[1]', r=True)
 cmds.polyNormalPerVertex( query=True, xyz=True )
 '''
+
 
 
 
