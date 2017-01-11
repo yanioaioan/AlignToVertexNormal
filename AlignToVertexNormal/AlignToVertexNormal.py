@@ -38,6 +38,7 @@ for i in range(len(vertexposlist)):
 	
 	cube=cmds.polyCube()
 	cmds.scale(0.05,0.05,0.05)
+	#move to the worldposition of the vertex
 	cmds.move(vertexposlist[i][0],vertexposlist[i][1],vertexposlist[i][2])
 	cmds.refresh()
 	
